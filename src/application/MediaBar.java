@@ -31,7 +31,7 @@ public class MediaBar extends HBox {
 		setStyle("-fx-background-color:white");
 		
 		pause = new Button("||");
-		volumeLBL = new Label("Volume : ");
+		volumeLBL = new Label("Volume : " + vol.getValue());
 		
 		getChildren().add(pause);
 		getChildren().add(time);
@@ -43,6 +43,9 @@ public class MediaBar extends HBox {
 		vol.setPrefWidth(70);
 		vol.setMinWidth(30);
 		vol.setValue(100);
+		
+
+		
 		
 		player.currentTimeProperty().addListener((o)-> {
 			time.setValue(player.getCurrentTime().toMillis()/player.getTotalDuration().toMillis()*100);

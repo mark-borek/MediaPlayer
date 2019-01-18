@@ -40,8 +40,9 @@ public class Main extends Application {
 			fileMenu = new Menu("File");
 			openItem = new MenuItem("open");
 			
-			body = new Text("Select media a file to play.");
+			body = new Text("Select media (.mp4) a file to play.");
 			body.setFont(Font.font("Helvetica", FontWeight.BOLD, 20));
+			body.setStyle("-fx-text-align: center");
 			
 			fileMenu.getItems().add(openItem);
 			menu.getMenus().add(fileMenu);
@@ -60,7 +61,6 @@ public class Main extends Application {
 					mediaPlayer = new Player(mediaFile.toURI().toURL().toExternalForm());
 					
 				} catch (MalformedURLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				root.setCenter(mediaPlayer);
