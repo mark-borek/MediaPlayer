@@ -8,7 +8,8 @@ import javafx.scene.media.MediaView;
 import javafx.scene.text.Text;
 
 public class Player extends BorderPane {
-	
+	//variables include a media file, a media player, a view of the media, 
+	//a pane to display the media, and a media bar 
 	Media media;
 	MediaPlayer player; 
 	MediaView view; 
